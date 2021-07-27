@@ -1,0 +1,761 @@
+*{
+    box-sizing: border-box;
+}
+
+::before, ::after{
+    box-sizing: border-box;
+}
+body{
+    counter-reset: number
+}
+@font-face {
+    font-family: "Exo 2";
+    src: url(../fonts/Exo20-SemiBold.woff);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PTSans-Caption.woff);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PTSans-CaptionBold.woff);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+.bg-color{
+    position: absolute;
+    background-image: url(../img/Rectangle.png);  
+    width: 832px;
+    height: 787px;
+    left: 841px;
+    top: 0px;
+    z-index: -1;
+}
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.head-content-left{
+    float: left;
+    max-width: 610px;
+    margin-top: 190px;
+}
+.head-content-right{
+    padding-top: 109px;
+    padding-bottom: 67px;
+    /* background-color:  #0B7572; Если станет очень скучно*/  
+}
+.head-title{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 125%;
+    color: #363738;
+    max-width: 610px;
+    margin-bottom: 40px;
+}
+.head-subtitile{
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #6B6B6C;   
+    margin-bottom: 40px;
+}
+.head-link{
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #363738;
+    text-decoration: none;
+    border-bottom: 3px solid #FFCE50;  
+}
+.image-truck{
+    background-image: url(../img/logo.jpg);
+    background-size: cover;
+    transform: translateX(0px);
+    height: 505px;
+    width: 635px;
+    border-radius: 2%;
+}
+.advantege-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+.advantege-wrapper li:first-child{
+    padding: 0px 124px 16px 64px;
+    margin: 40px 0px 40px;
+}
+.advantege-wrapper li:not(:first-child){
+    padding: 0px 108px 16px 80px;
+    border-left: 1px solid #D7D7DD;
+    margin: 40px 0px 40px;
+}
+.adventege-title{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    color: #363738;
+    margin-top: 16px;
+}
+.adventege-subtitle{
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6B6B6C;
+    margin-top: 16px;
+}
+.adventege-image{
+    width: 92px;
+    height: 92px;
+    background-color: #E9E9EC;
+    border-radius: 100%;
+    padding: 21px;
+}
+.adventege-image img{
+    width: 50px;
+    height: 50px;
+}
+.upper-image img{
+    width: 66px;
+    height: 66px;
+}
+.upper-image{
+    padding: 13px;
+}
+.survey{
+    margin-top: 100px;
+}
+.survey-content{
+    max-width: 687px;
+    float: left;
+}
+.survey-title{
+    font-family: "Exo 2";
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #363738;
+    min-width: 687px;
+}
+.survey-subtitle{
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6B6B6C;
+    max-width: 667px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+.survey-list{
+    display: block;
+    position: relative;
+    max-width: 687px;
+    background: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+.survey-radio{
+    float: left;
+    position: relative;
+    cursor: pointer;
+    left: 40px;
+    top: 49px;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #CBCBCD;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.survey-radio-title{
+    max-width: 466px;
+    padding-left: 96px;
+    padding-top: 40px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #363738;
+}
+.survey-radio-subtitle{
+    max-width: 466px;  
+    padding: 24px 0px 48px 96px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #6B6B6C; 
+}
+.survey-ugl{
+    position: absolute;
+    left: 494px;
+    bottom: 0px;
+    width: 193px;
+    height: 61.5px;
+    border-left: 193px solid transparent;
+    border-bottom: 61.5px solid #E9E9EC;
+    border-bottom-right-radius: 10px;
+}
+.count{
+    position: absolute;
+    top: 0px;
+    right: 132px;
+    top: 175px;
+}
+.golos{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #363738;
+}
+.text-count{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    color: #363738;
+}
+.text-golos{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #363738;
+}
+.count-golos{
+    display: inline-block;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #FFCE50;
+}
+.preview{
+    position: relative;
+    height: 454px;
+    margin-top: 1200px;
+}
+.preview-bg{
+    position: absolute;
+    height: 0px;
+    width: 769px;
+    border-left: 420px;
+    border-bottom: 452px solid #0B7572;
+    border-right: 480px solid transparent;
+    z-index: 10;
+}
+.preview-bg div{
+    display: inline-block;
+    width: 362px;
+    margin-top: 160px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: #FFFFFF;
+}
+.blur-bg{
+    position: absolute;
+    height: 0px;
+    width: 640px;
+    border-bottom: 453px solid #0B7572;
+    border-right: 480px solid transparent;
+    margin-left: 290px;
+    opacity: 0.3;
+    z-index: 5;
+}
+.preview-bg-image{
+    background-image: url(../img/rewiev-bg.jpg);
+    background-size: cover;
+    position: relative;
+    left: 170px;
+    height: 452px;
+    width: 1040px;
+    z-index: 2;
+}
+.preview-bg-onlycolor{
+    position: absolute;
+    height: 454px;
+    max-width: 900px;
+    background-color: #0B7572;   
+}
+.prewiew-color{
+    position: absolute;
+    bottom: 2px;
+    height: 452px;
+    width: 50%;
+    background: #0B7572;
+    z-index: 1;
+}
+.adventeges-title{
+    max-width: 447px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    color: #363738;
+}
+.adventeges-subtitle{
+    max-width: 447px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6B6B6C;
+}
+.adventeges-item{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.adventeges-hero:nth-child(1), .adventeges-hero:nth-child(2){
+    margin: 72.5px 0px 62px 0px;
+}
+.adventeges-hero:nth-child(odd){
+    margin-left: 64px;
+}
+.adventeges-hero:nth-child(1) .adventeges-icon img{
+    margin: 14px 18px;
+}
+.adventeges-hero:nth-child(2) .adventeges-icon img{
+    margin: 15px 20px;
+}
+.adventeges-hero:nth-child(3) .adventeges-icon img{
+    margin: 18px 18px;
+}
+.adventeges-hero:nth-child(4) .adventeges-icon img{
+    margin: 15px 18px 15.93px 18px;
+}
+.adventeges-hero:nth-last-child(2), .adventeges-hero:nth-last-child(1){
+    margin-bottom: 122px;
+}
+.adventeges-icon{
+    float:left;
+    height: 80px;
+    width: 80px;
+    margin-right: 40px;
+    background-color: #E9E9EC;
+    border-radius: 50%;
+}
+.works > h2{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: #363738;
+    margin-bottom: 30px;   
+}
+.works > h3{
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6B6B6C;    
+    margin-bottom: 56px;
+}
+.works-container{
+    position: relative;
+    display: flex;
+}
+.works-container li:not(:last-child){
+    margin-right: 30px;
+}
+.works-container-inner{
+    width: 393px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}
+.works-container-inner h2{
+    margin-top: 24px;
+    padding-left: 32px;
+    padding-right: 32px;  
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135%;
+    color: #363738;    
+}
+.works-container-inner h3{
+    margin-top: 16px;
+    margin-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;    
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6B6B6C;    
+}
+.works-container-inner img{
+    width: 393px;
+    height: 247px;    
+}
+.works-price{
+    display: inline-block;
+    margin-left: 32px;
+    margin-bottom: 32px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 135%;
+    color: #363738;
+    border-bottom: 3px solid #ffce50;    
+}
+.attracted-customers{
+    position: relative;
+    margin-top: 212px;
+    background-color: #0B7572;
+    width: 1220px;
+    height: 917px;
+}
+.bg-attracted{
+    position: absolute;
+    background-image: url(../img/hieroglyph.svg);
+    background-repeat: no-repeat; 
+    width: 1220px;
+    height: 917px;
+    margin-left: 33px;
+    z-index: 1;  
+}
+.attracted-customers > p{
+    padding-top: 100px;
+    padding-left: 80px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: #fff;
+    z-index: 2;
+}
+.attracted-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 32px 0 32px;
+    padding: 0 10px 0 10px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #D7D7DD;  
+}
+.attracted-customers-wrapper{
+    right: 67px;
+    top: 85px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 2;       
+}
+.atracted-header-logo{
+    width: 103px;
+    height: 57px;
+    margin-top: 28px;
+}
+.attracted-customers-info{
+    margin-top: 28px;
+    max-width: 274px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 150%;
+    color: #6B6B6C;       
+}
+.table{
+    margin: 24px 32px 40px 32px;    
+}
+
+.header-table-wrapper ul{
+    display: flex;
+    color: #fff;
+    background-color:  #0B7572;
+}
+
+.header-table-wrapper ul li{
+    display: inline-block;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+    height: 37px;
+    text-align: center;
+    padding-top: 5px;
+}
+.header-table-wrapper ul li:nth-child(1){
+    width: 113px;   
+}
+.header-table-wrapper ul li:nth-child(2){
+    width: 148px;   
+}
+.header-table-wrapper ul li:nth-child(3){
+    width: 173px;   
+}
+.header-table-wrapper ul li:nth-child(4){
+    width: 154px;   
+}
+.header-table-wrapper ul li:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.main-table-wrapper{
+    background-color: #F9F9FB;
+}
+.main-table-rows{
+    display: flex;
+}
+.table-container{
+    margin: 0 16px 0 16px;
+}
+.table-container:first-child {
+    padding-top: 8px;
+}
+.table-container:last-child {
+    padding-bottom: 24px;    
+}
+.table-container:not(:last-child){
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.table-img-rows{
+    padding: 16px 16px 16px 0px;
+}
+.table-img-rows img{
+    width: 81px;
+    height: 74px;    
+}
+.table-content-name-rows{
+    width: 148px;
+    padding: 16px 16px 24px 16px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6f6f79;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);       
+}
+.table-content-name-rows h2{
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6f6f79;      
+}
+.table-content-name-rows p{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 135%;
+    color: #363738;
+    margin-top: 10px;   
+}
+.table-content-manufacturer-rows{
+    width: 173px;
+    padding: 16px 16px 16px 16px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+.table-content-manufacturer-rows p{
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #363738;         
+}
+.table-content-manufacturer-rows h2{
+    margin-top: 10px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6B6B6C;             
+}
+.table-content-contact{
+    width: 138px;
+    padding: 16px 0px 16px 16px;
+}
+.table-content-contact p{
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #363738;              
+}
+.table-content-contact h2{
+    margin-top: 12px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;   
+}
+.table-content-contact h3{
+    margin-top: 10px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #363738;                
+}
+.table-stars{
+    background-image: url(../img/star.svg);
+    background-repeat: repeat-x;
+    width: 60px;
+    height: 11px;
+    margin-top: 12px;
+}
+.table-stars-half{
+    background-image: url(../img/star.svg);
+    background-repeat: repeat-x;
+    width: 48px;
+    height: 11px;
+    margin-top: 12px;
+    position: relative;
+}
+.table-inner-stars
+{
+    background-image: url(../img/bg-star.svg);
+    height: 11px;
+    width: 12px;
+    right: 0;
+    transform: translateX(12px);
+    position: absolute;
+}
+.table-inner-stars img{
+    position: relative;
+    top: 2px;
+}
+.delivery-stages h2{
+    max-width: 680px;
+    margin-top: 120px;
+    margin-bottom: 48px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: #363738;
+}
+.stages{
+    margin-left: 49px;
+}
+.stages li{
+    position: relative;
+    display: flex;
+    padding: 32px 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at -1% 50%, transparent 50px, #fff 1px);
+    border-radius: 10px;
+    max-width: 1183px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
+}
+.stages li::before{
+    counter-increment: number;
+    content: counter(number);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -49px;
+    top: 50%;
+    z-index: 1;
+    width: 68px;
+    height: 68px;
+    transform: translatey(-50%);
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    background-color: #0b7572;
+    filter: drop-shadow(0 5px 10px #0001);
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 48%;
+}
+.stages li:not(:last-child){
+    margin-bottom: 24px;
+}
+.stages-content{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.stages-content::before{
+    content: '';
+    position: absolute;
+    width: 108px;
+    height: 108px;
+    transform: translate(-60px,36px);
+    box-shadow: 0px 3px 15px red #C4C4C4;
+    border-radius: 100%;
+}
+.stages-content img{
+    border-radius: 4px;
+    padding-right: 56px;
+    padding-left: 96px;
+    width: 483px;
+    height: 181px;
+}
+.stages-title{
+    max-width: 540px;
+    margin-bottom: 24px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+    color: #363738; 
+}
+.stages-line{
+    width: 86px;
+    border-top: 3px solid #FFCE50;    
+    margin-bottom: 24px;
+}
+.stages-subtitle{
+    max-width: 568px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6B6B6C;                
+}
+.number-stages-wrapper{
+    position: absolute;
+    width: 108px;  
+    height: 108px;
+    transform: translate(-60px,36px);
+    border-radius: 50%;
+    border-right:  1px solid rgba(255, 255,255, 0.2);
+}
+.number-stages{
+    border-radius: 50%;
+    background-color: #0B7572;
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    left: 20px;
+    width: 68px;
+    height: 68px;
+    padding-top: 12px;
+    z-index: 2;   
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 38px;
+    color: #fff; 
+}
