@@ -725,10 +725,11 @@ body{
 .stages-line{
     width: 86px;
     border-top: 3px solid #FFCE50;    
-    margin-bottom: 24px;
+    display: inline-block;
 }
 .stages-subtitle{
     max-width: 568px;
+    margin-top: 24px;
     font-family: "PT Sans";
     font-weight: 400;
     font-size: 16px;
@@ -758,4 +759,177 @@ body{
     font-weight: 600;
     font-size: 38px;
     color: #fff; 
+}
+.trust-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.staff-in-company{
+    margin-top: 130px;
+    margin-bottom: 72px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: #363738;  
+}
+.staff-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+}
+.staff-content{
+    max-width: 605px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+.staff-content:not(:nth-child(1),:nth-child(2)){
+    margin-top: 24px;
+}
+.staff-content > img{
+    display: inline-block;
+    float: left;
+    width: 138px;
+    height: 138px;
+    margin: 32px 40px 40px 32px;
+}
+.stuff-name{
+    margin-top: 32px;
+    margin-bottom: 12px;
+    min-width: 180px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #363738;      
+}
+.stuff-post{
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #6B6B6C;                  
+}
+.color-stuff-decoration{
+    width: 51px;
+    height: 100%;
+    background-color: #0B7572;
+    float: left;
+    border-radius: 10px 0 0 10px;   
+}
+.feedback{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 32px;
+}
+.fb-inst img{
+    height: 22px;
+    width: 22px;
+    margin-right: 20px;
+}
+.fb-vk img{
+    width: 33px;
+    height: 19px;
+    margin-right: 20px;
+}
+.fb-in img{
+    height: 23px;
+    width: 23px;
+}
+.contacts-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.contacts-title{
+    margin-top: 130px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: #363738;    
+}
+.contacts-number:first-child{
+    margin-top: 94px;
+}
+.contacts-number:not(:first-child){
+    margin-top: 44px;
+}
+.contacts-number-wrapper{
+    display: inline-block;
+}
+.contacts-img-container{
+    height: 100%;
+    margin-right: 36px;
+    display: inline-block;
+}
+.contacts-img-container img{
+    display: flex;
+    justify-content: center;
+}
+.contacts-content{
+    display: inline-block;
+}
+.contacts-number-title{
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #6B6B6C;     
+}
+.contacts-number-subtitle{
+    margin-top: 8px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #363738;    
+}
+.contacts-number-subtitle, .contacts-number-title{
+    max-width: 200px;
+    display: flex;
+    justify-content: start;
+}
+.contacts-info{
+    display: flex;
+    margin-top: 72px;
+    background-color: #F9F9FB;
+}
+.contacts-info ul li:first-child{
+    margin-top: 40px;
+}
+.contacts-info ul li:not(:first-child){
+    margin-top: 32px;
+}
+.contacts-label{
+    display: inline-block;
+    margin: 0px 0px 0px 48px;
+    padding-bottom: 16px;
+    padding-right: 41px;
+    width: 231px;
+    border-bottom: 1px solid #E9EAF2;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6B6B6C;     
+}
+.contacts-label-content{
+    border-bottom: 1px solid #E9EAF2; 
+    width: 443px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #363738;        
+}
+.contacts-info ul{
+    padding-bottom: 56px;
+}
+.contacts-info ul li{
+    display: flex;
+    width: 794px;
+}
+.contact-no-border{
+    border: none;
 }
